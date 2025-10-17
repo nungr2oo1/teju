@@ -9,9 +9,7 @@ function App() {
     USE EFFECT - TWO PARAMETERS (1. FUNCTION, 2. DEPENDENCY ARRAY)
   */
   useEffect(()=>{
-    for(let i=0; i<=10; i++){
-      console.log(`${mandhu} * ${i} = ${i * mandhu}`)
-    }
+    console.log("The value of mandhu is", mandhu)
   }, [mandhu])
 
   /*
@@ -20,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar mandhu={mandhu} />
       <h1>Welcome to my wine shop!</h1>
       
       <div style={{display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center', margin: '20px'}}>
